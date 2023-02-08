@@ -4,7 +4,9 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      'bnb-pink': '#FF385C',
+    },
   },
   plugins: [],
   'tailwindCSS.emmetCompletions': true,
