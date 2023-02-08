@@ -2,10 +2,12 @@ import React from 'react';
 
 function SearchBar() {
   return (
-    <div className="search-bar flex gap-2 items-center p-2 border-2 border-bnb-icon/30 rounded-3xl">
-      <p className="border-r border-bnb-icon/30 pr-2">Anywhere</p>
-      <p className="border-r border-bnb-icon/30 pr-2">Any week</p>
-      <p>Add guest</p>
+    <div className="flex gap-4 items-center p-2 pl-4 border-2 border-gray-400/30 rounded-3xl shadow-md shadow-gray-200">
+      <div>Anywhere</div>
+      <div className="border-r border-gray-400 h-6" />
+      <div>Any week</div>
+      <div className="border-r border-gray-400 h-6" />
+      <div>Any guest</div>
       <button type="button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-bnb-pink">
           <path d="M8.25 10.875a2.625 2.625 0 115.25 0 2.625 2.625 0 01-5.25 0z" />
