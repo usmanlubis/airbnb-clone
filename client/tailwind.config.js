@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     colors: {
       'bnb-pink': '#FF385C',
+      'bnb-icon': '#777777',
     },
   },
   plugins: [],
