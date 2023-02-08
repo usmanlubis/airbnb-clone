@@ -2,7 +2,7 @@ import React from 'react';
 
 function BrandLogo() {
   return (
-    <div className="flex gap-1 items-center">
+    <a href="/" className="flex gap-1 items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -19,7 +19,7 @@ function BrandLogo() {
         />
       </svg>
       <p className="text-2xl text-bnb-pink font-bold">airbnb</p>
-    </div>
+    </a>
   );
 }
 
