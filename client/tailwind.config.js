@@ -4,9 +4,11 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    colors: {
-      'bnb-pink': '#FF385C',
-      'bnb-icon': '#777777',
+    extend: {
+      colors: {
+        'bnb-pink': '#FF385C',
+        'bnb-icon': '#777777',
+      },
     },
   },
   plugins: [],
