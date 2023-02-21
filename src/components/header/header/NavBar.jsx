@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavBar() {
   return (
-    <nav className="flex justify-between items-center gap-1">
+    <nav className="hidden md:flex justify-between items-center gap-1">
       <p className="cursor-pointer p-2 px-4 -mr-3 rounded-3xl hover:bg-bnb-icon/10">Airbnb your home</p>
       <div className="p-2 rounded-3xl cursor-pointer hover:bg-bnb-icon/10">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
