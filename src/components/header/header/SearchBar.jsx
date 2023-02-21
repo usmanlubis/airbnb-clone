@@ -32,7 +32,6 @@ function SearchBar() {
           <BiFilter size={35} className="border rounded-full p-1 shadow-xl" />
         </button>
       </div>
-      <div />
     </>
   );
 }
