@@ -2,7 +2,7 @@ import React from 'react';
 
 function BrandLogo() {
   return (
-    <a href="/" className="flex gap-1 items-center">
+    <a href="/" className="hidden md:flex gap-1 items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
