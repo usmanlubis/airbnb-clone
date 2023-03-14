@@ -5,7 +5,7 @@ import { BiFilter } from 'react-icons/bi';
 function SearchBar() {
   return (
     <>
-      <div className=" hidden md:flex gap-4 items-center p-2 pl-4 border-2 border-gray-400/30 rounded-3xl shadow-md shadow-gray-200">
+      <div className="hidden md:flex gap-4 items-center p-2 pl-4 border-2 border-gray-400/30 rounded-3xl shadow-md shadow-gray-200 ml-[180px]">
         <div>Anywhere</div>
         <div className="border-r border-gray-400 h-6" />
         <div>Any week</div>
