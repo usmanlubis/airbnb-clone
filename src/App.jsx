@@ -8,7 +8,7 @@ import Login from './pages/Login';
 function App() {
   return (
     <Routes>
-      <Route path='/airbnb-clone' element={<Layout />}>
+      <Route path="/airbnb-clone" element={<Layout />}>
         <Route path="/airbnb-clone/" element={<HomePage />} />
         <Route path="/airbnb-clone/login" element={<Login />} />
       </Route>
