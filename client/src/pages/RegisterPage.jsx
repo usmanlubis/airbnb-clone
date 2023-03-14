@@ -9,7 +9,11 @@ function RegisterPage() {
 
   function regist(event) {
     event.preventDefault();
-    axios.get('https://localhost:9000/test');
+    axios.post('/register', {
+      name,
+      email,
+      password,
+    });
   }
   return (
     <div className="grow mt-4">
