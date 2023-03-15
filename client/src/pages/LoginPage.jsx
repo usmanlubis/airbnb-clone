@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [redirect, setRedirect] = useState(false);
 
   async function loginHandler(e) {
     e.preventDefault();
     try {
       await axios.post('/login', { email, password });
       window.alert('Login successfull');
+      setRedirect(true);
     } catch (e) {
       window.alert('Login failed');
     }
+  }
+
+  if (redirect) {
+    return <Navigate to="/airbnb-clone" />;
   }
   return (
     <div className="grow mt-4">
