@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
 axios.defaults.baseURL = 'http://localhost:9000';
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
