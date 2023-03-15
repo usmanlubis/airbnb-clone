@@ -7,13 +7,18 @@ function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function regist(event) {
+  async function regist(event) {
     event.preventDefault();
-    axios.post('/register', {
-      name,
-      email,
-      password,
-    });
+    try {
+      await axios.post('/register', {
+        name,
+        email,
+        password,
+      });
+      window.alert('Registration successfull. Now you can log in');
+    } catch (e) {
+      window.alert('Registration failed.');
+    }
   }
   return (
     <div className="grow mt-4">

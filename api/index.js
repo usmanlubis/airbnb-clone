@@ -14,12 +14,15 @@ const bcryptSalt = bcrypt.genSaltSync(16)
 mongoose.connect(process.env.MONGO_URL)
 app.post("/register", async (req, res) => {
   const {name, email, password} = req.body;
-  const userDetail = await User.create({
-    name,
-    email,
-    password:bcrypt.hashSync(password, bcryptSalt),
-  });
-
-  res.json(userDetail)
+  try{
+    const userDetail = await User.create({
+      name,
+      email,
+      password:bcrypt.hashSync(password, bcryptSalt),
+    });
+    res.json(userDetail)
+  } catch (e) {
+    res.statusCode(422).json(e)
+  }
 });
 app.listen(9000);
