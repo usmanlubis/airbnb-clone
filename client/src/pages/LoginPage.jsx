@@ -22,7 +22,7 @@ function LoginPage() {
   }
 
   if (redirect) {
-    return <Navigate to="/airbnb-clone" />;
+    return <Navigate to="/airbnb-clone/" />;
   }
   return (
     <div className="grow mt-4">
