@@ -7,10 +7,9 @@ import NavBar from './NavBar';
 function Header() {
   return (
     <header className="flex justify-center md:justify-between items-center">
-      {/* <BrandLogo />
+      <BrandLogo />
       <SearchBar />
-      <NavBar /> */}
-      <div>Ini Header</div>
+      <NavBar />
     </header>
   );
 }
