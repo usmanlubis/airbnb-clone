@@ -4,11 +4,13 @@ const mongoose = require('mongoose');
 const User = require('./models/User')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-require('dotenv').config()
+const cookieParser = require('cookie-parser');
+require('dotenv').config();
 const app = express();
 
-app.use(express.json())
+app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 const bcryptSalt = bcrypt.genSaltSync(16);
 const jwtSecToken = 'fftatygdwwko';
@@ -45,4 +47,18 @@ app.post("/login", async (req, res) => {
     res.status(422).json('User not found');
   }
 })
+
+app.get("/profile", (req, res) => {
+  const {token} = req.cookies;
+  if (token) {
+    jwt.verify(token, jwtSecToken, {}, async (err, userData) => {
+      if (err) throw err;
+      const {name, email, _id} = await User.findById(userData.id)
+      res.json({name, email, _id})
+    })
+  } else {
+    json(null)
+  }
+})
+
 app.listen(9000);
