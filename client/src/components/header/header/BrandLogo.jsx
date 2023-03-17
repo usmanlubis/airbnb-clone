@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function BrandLogo() {
   return (
-    <Link href="/" className="hidden md:flex gap-1 items-center">
+    <Link to="/airbnb-clone/" className="hidden md:flex gap-1 items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -20,8 +20,7 @@ function BrandLogo() {
         />
       </svg>
       <p className="text-2xl text-bnb-pink font-bold">airbnb</p>
-    </Link>
-  );
+    </Link>);
 }
 
 export default BrandLogo;
