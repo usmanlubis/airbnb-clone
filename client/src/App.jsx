@@ -6,6 +6,7 @@ import Layout from './Layout';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import AccountPage from './pages/AccountPage';
 import { UserContextProvider } from './Context/UserContext';
 
 axios.defaults.baseURL = 'http://localhost:9000';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/airbnb-clone/" element={<HomePage />} />
           <Route path="/airbnb-clone/login" element={<LoginPage />} />
           <Route path="/airbnb-clone/register" element={<RegisterPage />} />
+          <Route path="/airbnb-clone/account" element={<AccountPage />} />
         </Route>
       </Routes>
     </UserContextProvider>
